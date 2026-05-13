@@ -1,0 +1,184 @@
+.reviews__item {
+    background: #f8f3e6;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+.reviews__item:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+.reviews__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.reviews__author {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+}
+.reviews__rating-value {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 193, 7, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #b8860b;
+    font-size: 14px;
+}
+.reviews__rating-value .star {
+    color: #ffc107;
+}
+.reviews__text {
+    color: #777777;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+}
+.reviews__empty {
+    font-size: 20px;
+    text-align: center;
+    color: #777777;
+    padding: 40px;
+    font-style: italic;
+}
+
+.review-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.review-container {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.review-title {
+    text-align: center;
+    color: var(--text-main);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 16px;
+    font-size: 16px;
+    color: var(--text-main);
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+
+.form-input:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 4px rgba(212, 175, 122, 0.15);
+}
+
+
+.form-label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 16px;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: all 0.25s ease;
+    background-color: var(--card-bg);
+    padding: 0 4px;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    top: -10px;
+    left: 12px;
+    font-size: 13px;
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.rating-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rating-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stars-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.stars-wrapper input {
+    display: none;
+}
+
+.stars-wrapper label {
+    font-size: 32px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+
+.stars-wrapper input:checked ~ label,
+.stars-wrapper label:hover,
+.stars-wrapper label:hover ~ label {
+    color: var(--accent-gold);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
