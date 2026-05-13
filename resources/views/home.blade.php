@@ -137,7 +137,6 @@
             </section>
         </div>
         <div class="col-sm-12 col-lg-6">
-            <section class="review-section">
                 <div class="review-container">
                     <h2 class="review-title">Оставить отзыв</h2>
 
@@ -145,7 +144,7 @@
                         @csrf
 
                         <!-- Поле Имя -->
-                        <div class="form-group">
+                        <div class="form-group d-flex">
                             <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
                             <label for="name" class="form-label">Ваше имя</label>
                         </div>
@@ -173,7 +172,7 @@
                         </div>
 
                         <!-- Поле Текст -->
-                        <div class="form-group">
+                        <div class="form-group d-flex">
                             <textarea id="review-text" name="review" class="form-input form-textarea" rows="4" placeholder=" " required></textarea>
                             <label for="review-text" class="form-label">Расскажите о впечатлениях</label>
                         </div>
@@ -184,7 +183,6 @@
                         </button>
                     </form>
                 </div>
-            </section>
         </div>
     </div>
     <section class="location">

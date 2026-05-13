@@ -382,6 +382,7 @@
 
     .banner {
         width: 100vw;
+        z-index: 0;
     }
 
     .banner h1 {
