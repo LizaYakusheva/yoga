@@ -17,7 +17,7 @@ class EventSeeder extends Seeder
                 'time' => 60,
                 'description' => 'Мягкая утренняя практика для пробуждения тела и спокойного начала дня.',
                 'teacher_id' => 1,
-                'image' => 'events/hatha-morning.jpg',
+                'image' => 'images/start.png',
             ],
             [
                 'name' => 'Виньяса флоу для начинающих',
@@ -26,7 +26,7 @@ class EventSeeder extends Seeder
                 'time' => 75,
                 'description' => 'Плавная динамическая практика с акцентом на дыхание и движение.',
                 'teacher_id' => 2,
-                'image' => 'events/vinyasa-flow.jpg',
+                'image' => 'images/start.png',
             ],
             [
                 'name' => 'Йога-нидра и глубокое расслабление',
@@ -35,7 +35,7 @@ class EventSeeder extends Seeder
                 'time' => 60,
                 'description' => 'Практика полного расслабления и восстановления нервной системы.',
                 'teacher_id' => 3,
-                'image' => 'events/yoga-nidra.jpg',
+                'image' => 'images/start.png',
             ],
             [
                 'name' => 'Йога для начинающих',
@@ -44,7 +44,7 @@ class EventSeeder extends Seeder
                 'time' => 90,
                 'description' => 'Базовые асаны и безопасное освоение йоги для новичков.',
                 'teacher_id' => 4,
-                'image' => 'events/beginner-yoga.jpg',
+                'image' => 'images/start.png',
             ],
         ];
 
