@@ -150,7 +150,7 @@
                         </div>
 
                         <!-- Рейтинг (Звезды) -->
-                        <div class="form-group rating-group">
+                        <div class="form-group d-flex rating-group">
                             <span class="rating-label">Оценка:</span>
                             <div class="stars-wrapper">
                                 <!-- Порядок важен: от 5 до 1 для работы CSS селектора ~ -->
