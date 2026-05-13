@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const burger = document.getElementById('burger-toggle');
     const nav = document.getElementById('main-nav');
+    const logo = document.querySelector('.logo-overlay');
 
     if (burger && nav) {
         burger.addEventListener('click', function () {
-            // ПЕРЕКЛЮЧАЕМ КЛАСС active ДЛЯ МЕНЮ
             nav.classList.toggle('active');
-
-            // ПЕРЕКЛЮЧАЕМ КЛАСС open ДЛЯ АНИМАЦИИ БУРГЕРА
+            logo.classList.toggle('logo-left');
             burger.classList.toggle('open');
         });
     }

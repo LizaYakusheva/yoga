@@ -95,6 +95,7 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
 
     // Записи
     Route::get('/applications', [ApplicationController::class, 'index'])->name('applications.index');
+    Route::delete('/applications/{application}', [ApplicationController::class, 'destroy'])->name('applications.destroy');
 
     // Преподаватели
     Route::get('/teachers', [TeacherController::class, 'index'])->name('teachers.index');

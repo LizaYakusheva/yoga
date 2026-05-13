@@ -14,4 +14,10 @@ class ApplicationController extends Controller
             'applications' => $applications
         ]);
     }
+
+    public function destroy(Application $application)
+    {
+        $application->delete();
+        return redirect()->route('admin.applications.index');
+    }
 }

@@ -18,6 +18,10 @@
     transition: all 0.3s ease;
 }
 
+.logo-left{
+    left: 20% !important;
+}
+
 .empty-state {
     text-align: center;
     padding: 60px 20px;

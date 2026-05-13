@@ -28,9 +28,13 @@
             <a href="{{ route('subscriptions') }}">Абонементы</a>
 
             @auth
-                <a href="{{ route('profile') }}">Личный кабинет</a>
+                @if(auth()->user()->name == 'Admin' && Hash::check('12345', auth()->user()->password))
+                    <a href="{{ route('admin.applications.index') }}">Админ-панель</a>
+                @else
+                    <a href="{{ route('profile') }}">Личный кабинет</a>
+                @endif
             @else
-                <a href="{{ route('login.form') }}" class="ms-5">Войти               </a>
+                <a href="{{ route('login.form') }}" class="ms-5">Войти</a>
             @endauth
         </nav>
 

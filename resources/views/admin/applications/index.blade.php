@@ -23,7 +23,11 @@
             <td data-label="Услуга / Абонемент">{{ $app->applicable->name }}</td>
             <td data-label="Дата">{{ date_format($app->created_at, 'd/m/y') }}</td>
             <td data-label="Действия" class="actions">
-                <button class="delete-btn">Удалить</button>
+                <form action="{{ route('admin.applications.destroy', $app) }}" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="delete-btn">Удалить</button>
+                </form>
             </td>
         </tr>
         @endforeach
