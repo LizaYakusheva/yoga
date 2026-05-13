@@ -41,7 +41,7 @@
                 <td data-label="Описание">{{ Str::limit($course->description, 70) }}</td>
                 <td data-label="Цена">{{ $course->price }} ₽</td>
                 <td data-label="Действия" class="actions">
-                    <a href="{{ route('admin.lessons.index', $course) }}">Уроки</a>
+                    <a href="{{ route('admin.lessons.index', $course) }}"  class="delete-btn">Уроки</a>
                     <a href="{{ route('admin.courses.edit', $course) }}" class="delete-btn">Изменить</a>
                     <form action="{{ route('admin.courses.destroy', $course) }}" method="post">
                         @method('DELETE')
