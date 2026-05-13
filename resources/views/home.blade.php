@@ -106,7 +106,7 @@
     <h2 class="text-center mt-3">Что о нас говорят клиенты?</h2>
 
     <div class="row align-items-center mb-4">
-        <div class="col-sm-12 col-lg-6 col-xl-8">
+        <div class="col-sm-12 col-lg-6 col-xl-8 mb-4">
             <section class="reviews">
                 @if($reviews->count() > 0)
                     <div class="reviews__list w-100">
