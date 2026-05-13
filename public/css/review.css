@@ -1,8 +1,9 @@
 .reviews{
-    overflow: scroll;
+    overflow-y: scroll;
     height: 540px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
+
 }
 
 .reviews__item {
