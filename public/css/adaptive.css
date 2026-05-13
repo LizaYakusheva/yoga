@@ -340,9 +340,9 @@
 }
 
 @media (max-width: 480px) {
-    .review-container {
-        padding: 25px;
-    }
+    /*.review-container {*/
+    /*    padding: 25px;*/
+    /*}*/
 
     .stars-wrapper label {
         font-size: 28px;

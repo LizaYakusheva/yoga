@@ -1,3 +1,10 @@
+.reviews{
+    overflow: scroll;
+    height: 540px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
 .reviews__item {
     background: #f8f3e6;
     border-radius: 12px;
@@ -53,7 +60,6 @@
 }
 
 .review-section {
-    padding: 60px 20px;
     display: flex;
     justify-content: center;
 }
