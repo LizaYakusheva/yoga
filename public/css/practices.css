@@ -142,7 +142,12 @@
 /* Адаптив */
 @media (max-width: 600px) {
     .yoga-about {
-        padding: 40px 15px;
+        width: 100%;
+    }
+
+    .yoga-about .container{
+        margin: 0;
+        padding: 0;
     }
 
     .section-title {
