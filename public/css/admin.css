@@ -225,7 +225,7 @@ tr:hover {
     background: linear-gradient(to right, #f0e7c7df, #c2a479d1);
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .dashboard {
         display: flex;
         flex-direction: column;
