@@ -383,6 +383,10 @@ footer .contacts .social div img:nth-child(2) {
     font-weight: 500;
 }
 
+.start .fields input::placeholder{
+    color: var(--text-dark);
+}
+
 .start .fields .btn {
     width: 100%;
     padding: 20px 0;

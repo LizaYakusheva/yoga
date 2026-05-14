@@ -101,7 +101,6 @@
 
         <a href="#">Политика конфиденциальности</a>
         <a href="#">Пользовательское соглашение</a>
-        <a href="{{ route('admin.applications.index') }}">Админка</a>
     </div>
 
     <nav>

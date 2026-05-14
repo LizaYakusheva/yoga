@@ -1,9 +1,8 @@
 @extends('theme')
 @section('content')
     <div class="course-show">
-        <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="mb-3">
             <h2>{{ $course->name }}</h2>
-
         </div>
         <p class="course-description">{{ $course->description }}</p>
         <div class="course-details">
