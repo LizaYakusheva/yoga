@@ -3,6 +3,31 @@
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
     <link rel="stylesheet" href="{{ asset('css/review.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <style>
+        .swiper {
+            height: 300px;
+        }
+
+        .swiper-slide {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 24px;
+            height: 24px;
+
+            color: rgba(0, 0, 0, .5);
+        }
+    </style>
 @endpush
 @section('banner')
     <section class="banner">
@@ -103,17 +128,17 @@
         </div>
     </div>
 
-    <h2 class="text-center mt-3">Что о нас говорят клиенты?</h2>
+    <h2 class="text-center my-5">Что о нас говорят клиенты?</h2>
 
-    <div class="row align-items-center mb-4">
-        <div class="col-sm-12 col-lg-6 col-xl-8 mb-4">
-            <section class="reviews">
-                @if($reviews->count() > 0)
-                    <div class="reviews__list w-100">
-                        @foreach($reviews as $review)
+    @if($reviews->isNotEmpty())
+        <div class="mb-4">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    @foreach($reviews as $review)
+                        <div class="swiper-slide">
                             <div class="reviews__item mb-2">
                                 <div class="reviews__header">
-                                    <h3 class="reviews__author">{{ $review->name }}</h3>
+                                    <h3 class="reviews__author">{{ $review->user->name }}</h3>
                                     <div class="reviews__rating-value">
                                         @for($i = 0; $i < $review->rating; $i++)
                                             <span class="star">★</span>
@@ -121,70 +146,64 @@
                                         @for($i = $review->rating; $i < 5; $i++)
                                             <span class="star" style="color: #ddd;">★</span>
                                         @endfor
-                                        <span>({{ $review->rating }}/5)</span>
                                     </div>
                                 </div>
-                                <p class="reviews__text">{{ $review->review }}</p>
+                                <p class="reviews__text">{{ \Illuminate\Support\Str::limit($review->review, 126) }}</p>
                                 <p class="reviews__text mt-2">{{ date_format($review->created_at, 'd/m/y') }}</p>
                             </div>
-                        @endforeach
-                    </div>
-                @else
-                    <div class="reviews__empty d-flex align-items-center">
-                        Пока нет отзывов. Будьте первым!
-                    </div>
-                @endif
-            </section>
-        </div>
-        <div class="col-sm-12 col-lg-6 col-xl-4">
-                <div class="review-container">
-                    <h2 class="review-title">Оставить отзыв</h2>
-
-                    <form action="{{ route('reviews.store') }}" method="post" class="review-form">
-                        @csrf
-
-                        <!-- Поле Имя -->
-                        <div class="form-group d-flex">
-                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
-                            <label for="name" class="form-label">Ваше имя</label>
                         </div>
-
-                        <!-- Рейтинг (Звезды) -->
-                        <div class="form-group d-flex rating-group">
-                            <span class="rating-label">Оценка:</span>
-                            <div class="stars-wrapper">
-                                <!-- Порядок важен: от 5 до 1 для работы CSS селектора ~ -->
-                                <input type="radio" name="rating" id="star5" value="5" required>
-                                <label for="star5" title="Отлично">★</label>
-
-                                <input type="radio" name="rating" id="star4" value="4">
-                                <label for="star4" title="Хорошо">★</label>
-
-                                <input type="radio" name="rating" id="star3" value="3">
-                                <label for="star3" title="Нормально">★</label>
-
-                                <input type="radio" name="rating" id="star2" value="2">
-                                <label for="star2" title="Плохо">★</label>
-
-                                <input type="radio" name="rating" id="star1" value="1">
-                                <label for="star1" title="Ужасно">★</label>
-                            </div>
-                        </div>
-
-                        <!-- Поле Текст -->
-                        <div class="form-group d-flex">
-                            <textarea id="review-text" name="review" class="form-input form-textarea" rows="4" placeholder=" " required></textarea>
-                            <label for="review-text" class="form-label">Расскажите о впечатлениях</label>
-                        </div>
-
-                        <!-- Кнопка -->
-                        <button type="submit" class="btn w-100 fw-medium py-2">
-                            Отправить отзыв
-                        </button>
-                    </form>
+                    @endforeach
                 </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
+    @endif
+
+    <div class="review-container m-auto mb-5">
+        <h2 class="review-title">Оставить отзыв</h2>
+
+        <form action="{{ route('reviews.store') }}" method="post" class="review-form">
+            @csrf
+
+            <!-- Рейтинг (Звезды) -->
+            <div class="form-group d-flex rating-group">
+                <span class="rating-label">Оценка:</span>
+                <div class="stars-wrapper">
+                    <!-- Порядок важен: от 5 до 1 для работы CSS селектора ~ -->
+                    <input type="radio" name="rating" id="star5" value="5" required>
+                    <label for="star5" title="Отлично">★</label>
+
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4" title="Хорошо">★</label>
+
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3" title="Нормально">★</label>
+
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2" title="Плохо">★</label>
+
+                    <input type="radio" name="rating" id="star1" value="1">
+                    <label for="star1" title="Ужасно">★</label>
+                </div>
+            </div>
+
+            <!-- Поле Текст -->
+            <div class="form-group d-flex">
+                    <textarea id="review-text" name="review" class="form-input form-textarea" rows="4" placeholder=" "
+                              required></textarea>
+                <label for="review-text" class="form-label">Расскажите о впечатлениях</label>
+            </div>
+
+            <!-- Кнопка -->
+            <button type="submit" class="btn w-100 fw-medium py-2">
+                Отправить отзыв
+            </button>
+        </form>
     </div>
+
     <section class="location">
         <h2>Как нас найти?</h2>
         <p>г.Абакан ул.Крылова,112</p>
@@ -208,6 +227,39 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            initialSlide: 1,
+            centeredSlides: true,
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 50,
+                depth: 200,
+                slideShadows: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 1.5,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 2.5,
+                }
+            }
         });
     </script>
 @endpush

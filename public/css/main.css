@@ -317,17 +317,12 @@ footer .contacts .social div {
     align-items: center;
 }
 
-footer .contacts .social div img:nth-child(2) {
-    width: 59px;
-    height: 59px;
-}
-
 .location {
     margin-bottom: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 25px;
 }
 
 .location h2,
@@ -394,4 +389,6 @@ footer .contacts .social div img:nth-child(2) {
     font-weight: 500;
 }
 
-
+.social_icon {
+    width: 40px;
+}

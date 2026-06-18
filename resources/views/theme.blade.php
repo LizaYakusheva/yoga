@@ -78,9 +78,9 @@
             <p>Мы в социальных сетях</p>
 
             <div>
-                <img src="{{ asset('img/icons/youtube.svg') }}" alt="YouTube">
-                <img src="{{ asset('img/icons/telegram.png') }}" alt="Telegram">
-                <img src="{{ asset('img/icons/instagram.svg') }}" alt="Instagram">
+                <img src="{{ asset('img/icons/youtube.svg') }}" alt="YouTube" class="social_icon">
+                <img src="{{ asset('img/icons/telegram.png') }}" alt="Telegram" class="social_icon">
+                <img src="{{ asset('img/icons/instagram.svg') }}" alt="Instagram" class="social_icon">
             </div>
         </div>
     </div>
