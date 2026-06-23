@@ -34,7 +34,7 @@
                     <a href="{{ route('profile') }}">Личный кабинет</a>
                 @endif
             @else
-                <a href="{{ route('login.form') }}" class="ms-5">Войти</a>
+                <a href="{{ route('login.form') }}" class="ms-lg-5">Войти</a>
             @endauth
         </nav>
 

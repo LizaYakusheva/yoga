@@ -9,10 +9,6 @@
     --transition: all 0.3s ease;
 }
 
-.yoga-about {
-    padding: 60px 20px;
-}
-
 .container {
     margin: 0 auto;
 }
@@ -141,11 +137,7 @@
 
 /* Адаптив */
 @media (max-width: 600px) {
-    .yoga-about {
-        width: 100%;
-    }
-
-    .yoga-about .container{
+    .yoga-about .container {
         margin: 0;
         padding: 0;
     }
@@ -162,6 +154,7 @@
         padding: 25px 20px;
     }
 }
+
 .main {
     display: flex;
     flex-direction: column;

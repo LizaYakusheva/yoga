@@ -6,7 +6,7 @@
 @section('content')
     <h2 class="mb-4 mt-4">Онлайн-курсы</h2>
 
-    <div class="row g-3 px-3 mb-3">
+    <div class="row g-3 mb-3">
         @foreach($courses as $course)
             <div class="col-sm-12 col-lg-3">
                 <div class="course-card h-100">

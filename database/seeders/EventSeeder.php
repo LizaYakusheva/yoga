@@ -43,7 +43,7 @@ class EventSeeder extends Seeder
                 'datetime' => '2026-05-20 10:00:00',
                 'time' => 90,
                 'description' => 'Базовые асаны и безопасное освоение йоги для новичков.',
-                'teacher_id' => 4,
+                'teacher_id' => 2,
                 'image' => 'images/start.png',
             ],
         ];

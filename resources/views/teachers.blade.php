@@ -10,7 +10,7 @@
 
         <div class="col-sm-12 col-lg-4">
             <div class="img-container photo">
-                <img src="{{ Storage::url($teacher->image) }}" alt="Студия" class="rounded-50">
+                <img src="{{ Storage::disk('public')->url($teacher->image) }}" alt="Студия" class="rounded-50">
             </div>
         </div>
 
