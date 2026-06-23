@@ -46,12 +46,6 @@
     <div class="d-flex flex-column gap-4 my-4">
         <div class="row align-items-center g-3">
             <div class="col-sm-12 col-lg-6">
-                <div class="img-container">
-                    <img src="{{ asset('img/studio.png') }}" alt="Студия" class="rounded-50">
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-lg-6">
                 <h2>О студии</h2>
 
                 <p>
@@ -65,15 +59,15 @@
                     услышать себя и найти внутренние ресурсы для гармоничной жизни.
                 </p>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="img-container">
+                    <img src="{{ asset('img/studio.png') }}" alt="Студия" class="rounded-50">
+                </div>
+            </div>
         </div>
 
         <div class="row align-items-center g-3 flex-row-reverse">
-            <div class="col-sm-12 col-lg-6">
-                <div class="img-container">
-                    <img src="img/teachers.png" alt="Преподаватели">
-                </div>
-            </div>
-
             <div class="col-sm-12 col-lg-6">
                 <h2>О преподавателях</h2>
 
@@ -84,15 +78,15 @@
                     регулярно повышаем квалификацию, чтобы предлагать вам самые эффективные и безопасные методики.
                 </p>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="img-container">
+                    <img src="{{ asset('img/teachers.png') }}" alt="Преподаватели">
+                </div>
+            </div>
         </div>
 
         <div class="row align-items-center g-3">
-            <div class="col-sm-12 col-lg-6">
-                <div class="img-container">
-                    <img src="img/practices.png" alt="Практики">
-                </div>
-            </div>
-
             <div class="col-sm-12 col-lg-6">
                 <h2>О практиках</h2>
 
@@ -102,6 +96,12 @@
                     специальные сеансы йога-нидры и медитации, которые помогают перезагрузить нервную систему и улучшить
                     качество сна. Каждая практика — это шаг к лучшей версии себя.
                 </p>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="img-container">
+                    <img src="{{ asset('img/practices.png') }}" alt="Практики">
+                </div>
             </div>
         </div>
     </div>
@@ -123,7 +123,7 @@
 
     <div id="modal">
         <div id="window">
-            <img src="img/icons/Checkmark.png" alt="checkmark" id="checkmark">
+            <img src="{{ asset('img/icons/Checkmark.png') }}" alt="checkmark" id="checkmark">
             <p class="p_modal">Ваш запрос принят!</p>
             <p class="p_modal">Наш администратор свяжется с вами</p>
             <button id="closeModal">Закрыть</button>

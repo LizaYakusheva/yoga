@@ -18,7 +18,7 @@
     transition: all 0.3s ease;
 }
 
-.logo-left{
+.logo-left {
     left: 20% !important;
 }
 
@@ -343,7 +343,6 @@
     /*.review-container {*/
     /*    padding: 25px;*/
     /*}*/
-
     .stars-wrapper label {
         font-size: 28px;
     }
@@ -386,6 +385,7 @@
 
     .banner {
         width: 100vw;
+        height: 450px !important;
         z-index: 0;
     }
 

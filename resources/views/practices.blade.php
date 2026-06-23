@@ -22,12 +22,6 @@
     <div class="d-flex flex-column gap-4 my-4">
         <div class="row align-items-center g-3">
             <div class="col-sm-12 col-lg-6">
-                <div class="img-container">
-                    <img src="{{ asset('img/studio.png') }}" alt="Студия" class="rounded-50">
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-lg-6">
                 <h2>Основы хатха-йоги</h2>
 
                 <p>
@@ -41,15 +35,15 @@
                 <p>В GongYoga мы стремимся создать пространство, где каждый может найти свой путь к самопознанию и
                     самосовершенствованию.</p>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="img-container">
+                    <img src="{{ asset('img/studio.png') }}" alt="Студия" class="rounded-50">
+                </div>
+            </div>
         </div>
 
         <div class="row align-items-center g-3 flex-row-reverse">
-            <div class="col-sm-12 col-lg-6">
-                <div class="img-container">
-                    <img src="img/teachers.png" alt="Преподаватели">
-                </div>
-            </div>
-
             <div class="col-sm-12 col-lg-6">
                 <h2>Виньяса-флоу продвинутый уровень</h2>
 
@@ -59,15 +53,15 @@
                     практику и выйти на новый уровень физического и энергетического развития.
                 </p>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="img-container">
+                    <img src="{{ asset('img/teachers.png') }}" alt="Преподаватели">
+                </div>
+            </div>
         </div>
 
         <div class="row align-items-center g-3">
-            <div class="col-sm-12 col-lg-6">
-                <div class="img-container">
-                    <img src="img/practices.png" alt="Практики">
-                </div>
-            </div>
-
             <div class="col-sm-12 col-lg-6">
                 <h2>Йога-терапия и восстановление</h2>
 
@@ -76,6 +70,12 @@
                     Мягкие техники и осознанный подход помогают восстановить здоровье, избавиться от хронических
                     напряжений и вернуть телю естественную подвижность и легкость.
                 </p>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="img-container">
+                    <img src="{{ asset('img/practices.png') }}" alt="Практики">
+                </div>
             </div>
         </div>
     </div>

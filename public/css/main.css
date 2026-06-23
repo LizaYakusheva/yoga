@@ -14,6 +14,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
+
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
 }
 
 body {
